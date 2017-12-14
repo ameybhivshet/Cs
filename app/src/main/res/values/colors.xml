@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#f7000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="titlecolor">#ffffff</color>
+    <color name="buttoncolor">#5e474242</color>
+    <color name="extrasbutton">#a1ed1818</color>
+    <color name="wicketbutton">#2F80ED</color>
+    <color name="undobutton">#c9e8951a</color>
+    <color name="statbutton">#6FCF97</color>
+</resources>

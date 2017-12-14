@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<dimen name="width">400dp</dimen>
+    <dimen name="height">250dp</dimen>
+
+    <dimen name="bwidth">500dp</dimen>
+    <dimen name="bheight">300dp</dimen>
+
+    <dimen name="npwidth">300dp</dimen>
+    <dimen name="npheight">350dp</dimen>
+
+
+</resources>

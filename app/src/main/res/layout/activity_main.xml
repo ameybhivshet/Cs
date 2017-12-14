@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="209dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#474242">
+
+        <TextView
+            android:id="@+id/team_1"
+            android:layout_width="match_parent"
+            android:layout_height="31dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="28dp"
+            android:text="Team 1"
+            android:textAlignment="center"
+            android:textColor="@color/titlecolor"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/s"
+            android:layout_width="57dp"
+            android:layout_height="39dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="26dp"
+            android:layout_marginTop="77dp"
+            android:text="Score:"
+            android:textColor="@color/titlecolor"
+            android:textSize="20sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/score1"
+            android:layout_width="wrap_content"
+            android:layout_height="39dp"
+
+            android:layout_alignBaseline="@+id/s"
+            android:layout_alignBottom="@+id/s"
+            android:layout_toEndOf="@+id/s"
+            android:layout_toRightOf="@+id/s"
+            android:gravity="end"
+            android:text="150"
+            android:textAlignment="textEnd"
+            android:textColor="@color/titlecolor"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/wicket1"
+            android:layout_width="wrap_content"
+            android:layout_height="39dp"
+
+            android:layout_alignBaseline="@+id/textView"
+            android:layout_alignBottom="@+id/textView"
+            android:layout_toEndOf="@+id/textView"
+            android:layout_toRightOf="@+id/textView"
+            android:text="0"
+            android:textColor="@color/titlecolor"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/ovtxt"
+            android:layout_width="wrap_content"
+            android:layout_height="39dp"
+            android:layout_alignBaseline="@+id/wicket1"
+            android:layout_alignBottom="@+id/wicket1"
+            android:layout_marginLeft="60dp"
+            android:layout_marginStart="60dp"
+            android:layout_toEndOf="@+id/wicket1"
+            android:layout_toRightOf="@+id/wicket1"
+            android:text="Overs:"
+            android:textColor="@color/titlecolor"
+            android:textSize="20sp"></TextView>
+
+        <TextView
+            android:id="@+id/over1"
+            android:layout_width="wrap_content"
+            android:layout_height="39dp"
+            android:layout_alignBaseline="@+id/ovtxt"
+            android:layout_alignBottom="@+id/ovtxt"
+            android:layout_toEndOf="@+id/ovtxt"
+            android:layout_toRightOf="@+id/ovtxt"
+            android:text="0"
+            android:textColor="@color/titlecolor"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/rrtext_"
+            android:layout_width="wrap_content"
+            android:layout_height="39dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="26dp"
+            android:layout_marginTop="122dp"
+            android:text="Run Rate:"
+            android:textColor="@color/titlecolor"
+            android:textSize="20sp"
+
+
+            ></TextView>
+
+        <TextView
+            android:id="@+id/runrate1"
+            android:layout_width="wrap_content"
+            android:layout_height="39dp"
+
+            android:layout_alignBaseline="@+id/rrtext_"
+            android:layout_alignBottom="@+id/rrtext_"
+            android:layout_toEndOf="@+id/rrtext_"
+            android:layout_toRightOf="@+id/rrtext_"
+            android:text="0"
+            android:textColor="@color/titlecolor"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/maxovers"
+            android:layout_width="wrap_content"
+            android:layout_height="39dp"
+            android:layout_alignBaseline="@+id/balls"
+            android:layout_alignBottom="@+id/balls"
+            android:layout_marginLeft="13dp"
+            android:layout_marginStart="13dp"
+            android:layout_toEndOf="@+id/dottext"
+            android:layout_toRightOf="@+id/dottext"
+            android:text="/50"
+            android:textColor="@color/titlecolor"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="39dp"
+            android:layout_alignTop="@+id/score1"
+            android:layout_toEndOf="@+id/score1"
+            android:layout_toRightOf="@+id/score1"
+            android:text="/"
+            android:textColor="@color/titlecolor"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/dottext"
+            android:layout_width="wrap_content"
+            android:layout_height="39dp"
+            android:layout_alignBaseline="@+id/over1"
+            android:layout_alignBottom="@+id/over1"
+            android:layout_toEndOf="@+id/over1"
+            android:layout_toRightOf="@+id/over1"
+            android:text="."
+            android:textColor="@color/titlecolor"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/balls"
+            android:layout_width="wrap_content"
+            android:layout_height="39dp"
+            android:layout_alignBaseline="@+id/dottext"
+            android:layout_alignBottom="@+id/dottext"
+            android:layout_toEndOf="@+id/dottext"
+            android:layout_toRightOf="@+id/dottext"
+            android:text="0"
+            android:textColor="@color/titlecolor"
+            android:textSize="20sp" />
+
+        <HorizontalScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true">
+
+            <TextView
+                android:id="@+id/overtext"
+
+                android:layout_width="wrap_content"
+
+
+                android:layout_height="29dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="180dp"
+
+                android:scrollHorizontally="true"
+                android:text="4,5,6,2,1,wd,4"
+                android:textColor="@color/titlecolor"
+                android:textSize="20sp"
+                android:textStyle="bold"
+
+                ></TextView>
+
+        </HorizontalScrollView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="209dp"
+        android:paddingLeft="32dp"
+        android:paddingStart="32dp"
+        android:paddingTop="15dp">
+
+        <Button
+            android:id="@+id/zero"
+            android:layout_width="42dp"
+            android:layout_height="39dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+android:onClick="zero"
+            android:layout_marginTop="39dp"
+            android:background="@color/buttoncolor"
+            android:text="0"
+            android:textColor="@color/titlecolor" />
+
+        <Button
+            android:id="@+id/one"
+            android:layout_width="42dp"
+            android:layout_height="39dp"
+            android:onClick="one"
+            android:layout_alignBottom="@+id/zero"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@+id/zero"
+            android:layout_toRightOf="@+id/zero"
+            android:background="@color/buttoncolor"
+            android:text="1"
+            android:textColor="@color/titlecolor" />
+
+        <Button
+            android:id="@+id/two"
+            android:onClick="two"
+            android:layout_width="42dp"
+            android:layout_height="39dp"
+            android:layout_alignTop="@+id/one"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@+id/one"
+            android:layout_toRightOf="@+id/one"
+            android:background="@color/buttoncolor"
+            android:text="2"
+            android:textColor="@color/titlecolor" />
+
+        <Button
+            android:id="@+id/three"
+            android:layout_width="42dp"
+            android:layout_height="39dp"
+            android:onClick="three"
+            android:layout_alignBottom="@+id/two"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@+id/two"
+            android:layout_toRightOf="@+id/two"
+            android:background="@color/buttoncolor"
+            android:text="3"
+            android:textColor="@color/titlecolor" />
+
+        <Button
+            android:id="@+id/four"
+            android:layout_width="42dp"
+            android:layout_height="39dp"
+            android:onClick="four"
+            android:layout_alignBottom="@+id/three"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@+id/three"
+            android:layout_toRightOf="@+id/three"
+            android:background="@color/buttoncolor"
+            android:text="4"
+            android:textColor="@color/titlecolor" />
+
+        <Button
+            android:id="@+id/five"
+            android:layout_width="42dp"
+            android:layout_height="39dp"
+            android:layout_alignLeft="@+id/zero"
+            android:layout_alignStart="@+id/zero"
+            android:onClick="five"
+            android:layout_below="@+id/zero"
+            android:layout_marginTop="18dp"
+            android:background="@color/buttoncolor"
+
+            android:text="5"
+            android:textColor="@color/titlecolor" />
+
+        <Button
+            android:id="@+id/six"
+            android:layout_width="42dp"
+            android:layout_height="39dp"
+            android:onClick="six"
+            android:layout_alignBottom="@+id/five"
+            android:layout_alignLeft="@+id/one"
+            android:layout_alignStart="@+id/one"
+            android:background="@color/buttoncolor"
+            android:text="6"
+            android:textColor="@color/titlecolor" />
+
+        <Button
+            android:id="@+id/wide"
+            android:layout_width="42dp"
+            android:layout_height="39dp"
+            android:layout_alignLeft="@+id/five"
+            android:layout_alignStart="@+id/five"
+            android:layout_below="@+id/five"
+            android:layout_marginTop="18dp"
+            android:onClick="wide"
+            android:background="@color/extrasbutton"
+            android:text="wd"
+            android:textColor="@color/titlecolor" />
+
+        <Button
+            android:id="@+id/noball"
+            android:layout_width="42dp"
+            android:layout_height="39dp"
+            android:layout_alignBottom="@+id/wide"
+            android:layout_toLeftOf="@+id/two"
+            android:onClick="noball"
+            android:layout_toStartOf="@+id/two"
+            android:background="@color/extrasbutton"
+            android:text="nb"
+            android:textColor="@color/titlecolor" />
+
+        <Button
+            android:id="@+id/legbye"
+            android:layout_width="42dp"
+            android:layout_height="39dp"
+            android:layout_alignBottom="@id/noball"
+            android:layout_alignTop="@+id/noball"
+            android:layout_toLeftOf="@+id/three"
+            android:layout_toStartOf="@+id/three"
+            android:background="@color/extrasbutton"
+            android:text="lb"
+            android:onClick="legbye"
+            android:textColor="@color/titlecolor" />
+
+        <Button
+            android:id="@+id/bye"
+            android:layout_width="42dp"
+            android:layout_height="39dp"
+            android:layout_alignBottom="@+id/legbye"
+            android:layout_alignLeft="@+id/three"
+            android:layout_alignStart="@+id/three"
+            android:background="@color/extrasbutton"
+            android:onClick="bye"
+            android:text="b"
+            android:textColor="@color/titlecolor" />
+
+        <Button
+            android:id="@+id/penalty"
+            android:layout_width="42dp"
+            android:layout_height="39dp"
+            android:onClick="penalty"
+            android:layout_alignBottom="@+id/legbye"
+            android:layout_alignLeft="@+id/four"
+            android:layout_alignStart="@+id/four"
+            android:background="@color/extrasbutton"
+            android:text="pen"
+            android:textColor="@color/titlecolor" />
+
+        <Button
+            android:id="@+id/wicketbutton1"
+            android:layout_width="42dp"
+            android:layout_height="39dp"
+            android:layout_alignLeft="@+id/wide"
+            android:layout_alignStart="@+id/wide"
+            android:layout_below="@+id/wide"
+            android:layout_marginTop="18dp"
+            android:background="@color/wicketbutton"
+            android:text="wkt"
+            android:onClick="wicket"
+            android:textColor="@color/titlecolor" />
+
+        <Button
+            android:id="@+id/undo"
+            android:layout_width="105dp"
+            android:layout_height="39dp"
+            android:layout_alignBottom="@+id/wicketbutton1"
+            android:layout_alignLeft="@+id/noball"
+            android:layout_alignStart="@+id/noball"
+            android:background="@color/undobutton"
+            android:text="undo"
+            android:onClick="undo"
+            android:textColor="@color/titlecolor" />
+
+        <Button
+            android:id="@+id/stats1"
+            android:layout_width="105dp"
+            android:layout_height="39dp"
+            android:layout_alignBottom="@+id/undo"
+            android:layout_alignLeft="@+id/bye"
+            android:onClick="stats"
+            android:layout_alignStart="@+id/bye"
+            android:background="@color/statbutton"
+            android:text="stats"
+            android:textColor="@color/titlecolor" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
