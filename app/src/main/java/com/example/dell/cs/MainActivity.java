@@ -1,7 +1,9 @@
 package com.example.dell.cs;
 
 import android.app.FragmentManager;
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,17 +12,21 @@ import android.widget.NumberPicker;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
     TextView teamb1, teamb2, maxoversb, score1b, wicket1b, over1b, ballsb, runrate1b, overtext, dottext;
     int addr = 0, wkt = 0, ball = 0, completedover = 0, flag = -1, nb = -1, wd = -1, lb = -1, b = -1, pen = -1, counter = 0, i = -1, extravar;
     float rr;
     String textperover[] = new String[30];
     String deleteelement;
-
+    String dataarray;
     Float runsforrunrate;
     Float oversforrunrate;
+    ArrayList<String> arrayList=new ArrayList<String>();
     android.support.v4.app.FragmentManager fragmentManager;
-
+    SQLitehelper sqLitehelper;
+    SQLiteDatabase database;
 
     String t1, t2, ovr, temp, runs, wickets, combineballsovers;
 
@@ -52,6 +58,11 @@ public class MainActivity extends AppCompatActivity {
 
         ballsb.setText("0");
         maxoversb.setText("/" + ovr);
+        sqLitehelper = new SQLitehelper(this);
+        int version = sqLitehelper.getReadableDatabase().getVersion();
+        sqLitehelper.onUpgrade(sqLitehelper.getReadableDatabase(), version, version + 1);
+
+        Log.d("ver", "" + version);
 
 
     }
@@ -881,6 +892,10 @@ public class MainActivity extends AppCompatActivity {
     {
 
 
+Intent intent=new Intent(this,Activity2.class);
+startActivity(intent);
+
+
 
     }
 
@@ -1118,11 +1133,32 @@ runratecalculator();
             completedover++;
             ball = 0;
 
+            dataarray=overtext.getText().toString();
+            arrayList.add(dataarray);
+            database=sqLitehelper.getReadableDatabase();
+            ContentValues contentValues = new ContentValues();
+
+            contentValues.put(sqLitehelper.COLUMN_FIRST_NAME, String.valueOf(arrayList.get(0)));
+
+
+            Log.d("sqldata",String.valueOf(arrayList.get(0)));
+            database.insert(sqLitehelper.TABLE_NAME, null, contentValues);
+            database.close();
+
+
+            //intent.putExtra("array", arrayList);
+
+            arrayList.clear();
+
+            dataarray="";
+            i=-1;
+            overtext.setText("" +dataarray);
+
             over1b.setText("" + completedover);
 
             ballsb.setText("" + ball);
-            overtext.setText("");
-            i=-1;
+
+
 
         }
 
